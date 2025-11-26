@@ -111,7 +111,8 @@ const App = () => {
   };
 
   const handleDelete = (id) => {
-    if (confirm('Are you sure you want to delete this user? (This only deletes from the app, not the Google Sheet)')) {
+    // FIX: window.confirm use karna zaroori hai
+    if (window.confirm('Are you sure you want to delete this user? (This only deletes from the app, not the Google Sheet)')) {
       setUsers(users.filter(user => user.id !== id));
     }
   };
